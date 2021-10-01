@@ -1,9 +1,5 @@
 from datetime import time, date, datetime
 import telebot as tg
-import sysconfig
-import sys
-import math
-import types
 
 bot = tg.TeleBot("Your Token from BotFather")
 
