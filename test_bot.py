@@ -23,119 +23,119 @@ pr = ['(проф.Орловой Е.В)', '(проф.Лазепной Е.В)']
 pop = [sub[0]+type[0], sub[0]+type[1], sub[2]+type[0], sub[2]+type[1], sub[3]+type[0], sub[3]+type[1], sub[6]+type[0], sub[6]+type[1], sub[8]+type[0], sub[8]+type[1], sub[11]+type[0], sub[11]+type[1], sub[12]+type[0], sub[12]+type[1]]
 
 time = ['1. 8:30 - 9:10 (10) \n', '2. 9:20 - 10:00 (15) \n', '3. 10:15 - 10:55 (15) \n', '4. 11:10 - 11:50 (15) \n', '5. 12:05 - 12:45 (10) \n', '6. 12:55 - 13:35 (25) \n', '7. 14:00 - 14:40 (15) \n', '8. 14:55 - 15:35 (15) \n', '9. 15:50 - 16:30 \n']
-
+d = ['Расписание на понедельник \n']
 ########################################################################################################################
 day1_10_1 = [num[0] + sub[7] + cab[5]]
-day1_10_2 = [num[2] + pop[3] + cab[4] + ili[0] + pop[7] + cab[11]]
-day1_10_3 = [num[1] + pop[3] + cab[4] + ili[0] + pop[7] + cab[11]]
+day1_10_2 = [num[1] + pop[3] + cab[4] + ili[0] + pop[7] + cab[11]]
+day1_10_3 = [num[2] + pop[3] + cab[4] + ili[0] + pop[7] + cab[11]]
 day1_10_4 = [num[3] + sub[1] + pc[0]]
 day1_10_5 = [num[4] + sub[4] + pc[0]]
 day1_10_6 = [num[5] + sub[4] + pc[0]]
 day1_10_7 = [num[6] + sub[13] + pc[1]]
 day1_10_8 = [num[7] + pop[0] + cab[12] + ili[0] + sub[5] + cab[2] + pr[0]]
 day1_10_9 = [num[8] + pop[0] + cab[12] + ili[0] + sub[5] + cab[2] + pr[0]]
-day1_10 = []
-
-day2_10_1 = [num[0] + sub[] + cab[]]
-day2_10_2 = [num[1] + sub[] + cab[]]
-day2_10_3 = [num[2] + sub[] + cab[]]
-day2_10_4 = [num[3] + sub[] + cab[]]
-day2_10_5 = [num[4] + sub[] + cab[]]
-day2_10_6 = [num[5] + sub[] + cab[]]
-day2_10_7 = [num[6] + sub[] + cab[]]
-day2_10_8 = [num[7] + sub[] + cab[]]
-day2_10_9 = [num[8] + sub[] + cab[]]
-day2_10 = []
-
-day3_10_1 = [num[0] + sub[] + cab[]]
-day3_10_2 = [num[1] + sub[] + cab[]]
-day3_10_3 = [num[2] + sub[] + cab[]]
-day3_10_4 = [num[3] + sub[] + cab[]]
-day3_10_5 = [num[4] + sub[] + cab[]]
-day3_10_6 = [num[5] + sub[] + cab[]]
-day3_10_7 = [num[6] + sub[] + cab[]]
-day3_10_8 = [num[7] + sub[] + cab[]]
-day3_10_9 = [num[8] + sub[] + cab[]]
-day3_10 = []
-
-day4_10_1 = [num[0] + sub[] + cab[]]
-day4_10_2 = [num[1] + sub[] + cab[]]
-day4_10_3 = [num[2] + sub[] + cab[]]
-day4_10_4 = [num[3] + sub[] + cab[]]
-day4_10_5 = [num[4] + sub[] + cab[]]
-day4_10_6 = [num[5] + sub[] + cab[]]
-day4_10_7 = [num[6] + sub[] + cab[]]
-day4_10_8 = [num[7] + sub[] + cab[]]
-day4_10_9 = [num[8] + sub[] + cab[]]
-day4_10 = []
-
-day5_10_1 = [num[0] + sub[] + cab[]]
-day5_10_2 = [num[1] + sub[] + cab[]]
-day5_10_3 = [num[2] + sub[] + cab[]]
-day5_10_4 = [num[3] + sub[] + cab[]]
-day5_10_5 = [num[4] + sub[] + cab[]]
-day5_10_6 = [num[5] + sub[] + cab[]]
-day5_10_7 = [num[6] + sub[] + cab[]]
-day5_10_8 = [num[7] + sub[] + cab[]]
-day5_10_9 = [num[8] + sub[] + cab[]]
-day5_10 = []
-
-#======================================================================================================================#
-
-day1_11_1 = [num[0] + sub[] + cab[]]
-day1_11_2 = [num[1] + sub[] + cab[]]
-day1_11_3 = [num[2] + sub[] + cab[]]
-day1_11_4 = [num[3] + sub[] + cab[]]
-day1_11_5 = [num[4] + sub[] + cab[]]
-day1_11_6 = [num[5] + sub[] + cab[]]
-day1_11_7 = [num[6] + sub[] + cab[]]
-day1_11_8 = [num[7] + sub[] + cab[]]
-day1_11_9 = [num[8] + sub[] + cab[]]
-day1_11 = []
-
-day2_11_1 = [num[0] + sub[] + cab[]]
-day2_11_2 = [num[1] + sub[] + cab[]]
-day2_11_3 = [num[2] + sub[] + cab[]]
-day2_11_4 = [num[3] + sub[] + cab[]]
-day2_11_5 = [num[4] + sub[] + cab[]]
-day2_11_6 = [num[5] + sub[] + cab[]]
-day2_11_7 = [num[6] + sub[] + cab[]]
-day2_11_8 = [num[7] + sub[] + cab[]]
-day2_11_9 = [num[8] + sub[] + cab[]]
-day2_11 = []
-
-day3_11_1 = [num[0] + sub[] + cab[]]
-day3_11_2 = [num[1] + sub[] + cab[]]
-day3_11_3 = [num[2] + sub[] + cab[]]
-day3_11_4 = [num[3] + sub[] + cab[]]
-day3_11_5 = [num[4] + sub[] + cab[]]
-day3_11_6 = [num[5] + sub[] + cab[]]
-day3_11_7 = [num[6] + sub[] + cab[]]
-day3_11_8 = [num[7] + sub[] + cab[]]
-day3_11_9 = [num[8] + sub[] + cab[]]
-day3_11 = []
-
-day4_11_1 = [num[0] + sub[] + cab[]]
-day4_11_2 = [num[1] + sub[] + cab[]]
-day4_11_3 = [num[2] + sub[] + cab[]]
-day4_11_4 = [num[3] + sub[] + cab[]]
-day4_11_5 = [num[4] + sub[] + cab[]]
-day4_11_6 = [num[5] + sub[] + cab[]]
-day4_11_7 = [num[6] + sub[] + cab[]]
-day4_11_8 = [num[7] + sub[] + cab[]]
-day4_11_9 = [num[8] + sub[] + cab[]]
-day4_11 = []
-
-day5_11_1 = [num[0] + sub[] + cab[]]
-day5_11_2 = [num[1] + sub[] + cab[]]
-day5_11_3 = [num[2] + sub[] + cab[]]
-day5_11_4 = [num[3] + sub[] + cab[]]
-day5_11_5 = [num[4] + sub[] + cab[]]
-day5_11_6 = [num[5] + sub[] + cab[]]
-day5_11_7 = [num[6] + sub[] + cab[]]
-day5_11_8 = [num[7] + sub[] + cab[]]
-day5_11_9 = [num[8] + sub[] + cab[]]
-day5_11 = []
+day1_10 = [day1_10_1[0] + '\n' + day1_10_2[0] + '\n' + day1_10_3[0] + '\n' + day1_10_4[0] + '\n' + day1_10_5[0] + '\n' + day1_10_6[0] + '\n' + day1_10_7[0] + '\n' + day1_10_8[0] + '\n' + day1_10_9[0]]
+#
+# day2_10_1 = [num[0] + sub[] + cab[]]
+# day2_10_2 = [num[1] + sub[] + cab[]]
+# day2_10_3 = [num[2] + sub[] + cab[]]
+# day2_10_4 = [num[3] + sub[] + cab[]]
+# day2_10_5 = [num[4] + sub[] + cab[]]
+# day2_10_6 = [num[5] + sub[] + cab[]]
+# day2_10_7 = [num[6] + sub[] + cab[]]
+# day2_10_8 = [num[7] + sub[] + cab[]]
+# day2_10_9 = [num[8] + sub[] + cab[]]
+# day2_10 = []
+#
+# day3_10_1 = [num[0] + sub[] + cab[]]
+# day3_10_2 = [num[1] + sub[] + cab[]]
+# day3_10_3 = [num[2] + sub[] + cab[]]
+# day3_10_4 = [num[3] + sub[] + cab[]]
+# day3_10_5 = [num[4] + sub[] + cab[]]
+# day3_10_6 = [num[5] + sub[] + cab[]]
+# day3_10_7 = [num[6] + sub[] + cab[]]
+# day3_10_8 = [num[7] + sub[] + cab[]]
+# day3_10_9 = [num[8] + sub[] + cab[]]
+# day3_10 = []
+#
+# day4_10_1 = [num[0] + sub[] + cab[]]
+# day4_10_2 = [num[1] + sub[] + cab[]]
+# day4_10_3 = [num[2] + sub[] + cab[]]
+# day4_10_4 = [num[3] + sub[] + cab[]]
+# day4_10_5 = [num[4] + sub[] + cab[]]
+# day4_10_6 = [num[5] + sub[] + cab[]]
+# day4_10_7 = [num[6] + sub[] + cab[]]
+# day4_10_8 = [num[7] + sub[] + cab[]]
+# day4_10_9 = [num[8] + sub[] + cab[]]
+# day4_10 = []
+#
+# day5_10_1 = [num[0] + sub[] + cab[]]
+# day5_10_2 = [num[1] + sub[] + cab[]]
+# day5_10_3 = [num[2] + sub[] + cab[]]
+# day5_10_4 = [num[3] + sub[] + cab[]]
+# day5_10_5 = [num[4] + sub[] + cab[]]
+# day5_10_6 = [num[5] + sub[] + cab[]]
+# day5_10_7 = [num[6] + sub[] + cab[]]
+# day5_10_8 = [num[7] + sub[] + cab[]]
+# day5_10_9 = [num[8] + sub[] + cab[]]
+# day5_10 = []
+#
+# #======================================================================================================================#
+#
+# day1_11_1 = [num[0] + sub[] + cab[]]
+# day1_11_2 = [num[1] + sub[] + cab[]]
+# day1_11_3 = [num[2] + sub[] + cab[]]
+# day1_11_4 = [num[3] + sub[] + cab[]]
+# day1_11_5 = [num[4] + sub[] + cab[]]
+# day1_11_6 = [num[5] + sub[] + cab[]]
+# day1_11_7 = [num[6] + sub[] + cab[]]
+# day1_11_8 = [num[7] + sub[] + cab[]]
+# day1_11_9 = [num[8] + sub[] + cab[]]
+# day1_11 = []
+#
+# day2_11_1 = [num[0] + sub[] + cab[]]
+# day2_11_2 = [num[1] + sub[] + cab[]]
+# day2_11_3 = [num[2] + sub[] + cab[]]
+# day2_11_4 = [num[3] + sub[] + cab[]]
+# day2_11_5 = [num[4] + sub[] + cab[]]
+# day2_11_6 = [num[5] + sub[] + cab[]]
+# day2_11_7 = [num[6] + sub[] + cab[]]
+# day2_11_8 = [num[7] + sub[] + cab[]]
+# day2_11_9 = [num[8] + sub[] + cab[]]
+# day2_11 = []
+#
+# day3_11_1 = [num[0] + sub[] + cab[]]
+# day3_11_2 = [num[1] + sub[] + cab[]]
+# day3_11_3 = [num[2] + sub[] + cab[]]
+# day3_11_4 = [num[3] + sub[] + cab[]]
+# day3_11_5 = [num[4] + sub[] + cab[]]
+# day3_11_6 = [num[5] + sub[] + cab[]]
+# day3_11_7 = [num[6] + sub[] + cab[]]
+# day3_11_8 = [num[7] + sub[] + cab[]]
+# day3_11_9 = [num[8] + sub[] + cab[]]
+# day3_11 = []
+#
+# day4_11_1 = [num[0] + sub[] + cab[]]
+# day4_11_2 = [num[1] + sub[] + cab[]]
+# day4_11_3 = [num[2] + sub[] + cab[]]
+# day4_11_4 = [num[3] + sub[] + cab[]]
+# day4_11_5 = [num[4] + sub[] + cab[]]
+# day4_11_6 = [num[5] + sub[] + cab[]]
+# day4_11_7 = [num[6] + sub[] + cab[]]
+# day4_11_8 = [num[7] + sub[] + cab[]]
+# day4_11_9 = [num[8] + sub[] + cab[]]
+# day4_11 = []
+#
+# day5_11_1 = [num[0] + sub[] + cab[]]
+# day5_11_2 = [num[1] + sub[] + cab[]]
+# day5_11_3 = [num[2] + sub[] + cab[]]
+# day5_11_4 = [num[3] + sub[] + cab[]]
+# day5_11_5 = [num[4] + sub[] + cab[]]
+# day5_11_6 = [num[5] + sub[] + cab[]]
+# day5_11_7 = [num[6] + sub[] + cab[]]
+# day5_11_8 = [num[7] + sub[] + cab[]]
+# day5_11_9 = [num[8] + sub[] + cab[]]
+# day5_11 = []
 
 ########################################################################################################################
 
@@ -155,27 +155,35 @@ def send_about(message):
 def send_about(message):
     if message.text.lower() == '10':
         if date.today().weekday() == 0:
-            bot.send_message(message.chat.id, day1_10)
+            bot.send_message(message.chat.id, "".join(day1_10))
         if date.today().weekday() == 1:
-            bot.send_message(message.chat.id, day1_10)
+            bot.send_message(message.chat.id, "".join(day2_10))
         if date.today().weekday() == 2:
-            bot.send_message(message.chat.id, day1_10)
+            bot.send_message(message.chat.id, "".join(day3_10))
         if date.today().weekday() == 3:
-            bot.send_message(message.chat.id, day1_10)
+            bot.send_message(message.chat.id, "".join(day4_10))
         if date.today().weekday() == 4:
-            bot.send_message(message.chat.id, day1_10)
+            bot.send_message(message.chat.id, "".join(day5_10))
+        if date.today().weekday() == 5:
+            bot.send_message(message.chat.id, d[0] + "".join(day1_10))
+        if date.today().weekday() == 6:
+            bot.send_message(message.chat.id, d[0] + "".join(day1_10))
 
     elif message.text.lower() == '11':
         if date.today().weekday() == 0:
-            bot.send_message(message.chat.id, day1_11)
+            bot.send_message(message.chat.id, "".join(day1_11))
         if date.today().weekday() == 1:
-            bot.send_message(message.chat.id, day1_11)
+            bot.send_message(message.chat.id, "".join(day2_11))
         if date.today().weekday() == 2:
-            bot.send_message(message.chat.id, day1_11)
+            bot.send_message(message.chat.id, "".join(day3_11))
         if date.today().weekday() == 3:
-            bot.send_message(message.chat.id, day1_11)
+            bot.send_message(message.chat.id, "".join(day4_11))
         if date.today().weekday() == 4:
-            bot.send_message(message.chat.id, day1_11)
+            bot.send_message(message.chat.id, "".join(day5_11))
+        if date.today().weekday() == 5:
+            bot.send_message(message.chat.id, d[0] + "".join(day1_11))
+        if date.today().weekday() == 6:
+            bot.send_message(message.chat.id, d[0] + "".join(day1_11))
 
     elif message.text.lower() == 'звонки':
         bot.reply_to(message, "".join(time))
