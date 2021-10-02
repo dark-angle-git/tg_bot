@@ -1,8 +1,7 @@
 from datetime import time, date, datetime
 import telebot as tg
-import config
 
-bot = tg.TeleBot(config.token)
+bot = tg.TeleBot("token")
 
 #      0      1      2      3      4      5      6      7      8
 num = ['1. ', '2. ', '3. ', '4. ', '5. ', '6. ', '7. ', '8. ', '9. ']
