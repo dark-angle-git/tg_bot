@@ -237,12 +237,5 @@ def send_lessons(message):
 
     else:
         bot.send_message(message.from_user.id, 'Ошибка, я не понял запроса. Пожалуйста, повторите ещё раз')
-
-
-# bot.reply_to(message, f'Сегодня выходной, но могу подсказать расписание на понедельник. Напиши да, или нет')
-# if message.text.lower() == 'Да' or 'да':
-#     bot.send_message(message.chat.id, d[0] + "".join(day1_10))
-# if message.text.lower() == 'Нет' or 'нет':
-#     bot.send_message(message.chat.id, 'Хороших выходных')
 # Обязательное условие!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 bot.polling(none_stop=True)
