@@ -1,2 +1,2 @@
 # tg_bot
-Telegram bot with lessons
+Telegram bots
