@@ -1,5 +1,6 @@
 import telebot as tg
 import random
+import config
 
 class user:
 	def __init__(self, name, id):
@@ -8,7 +9,7 @@ class user:
 
 
 
-bot = tg.TeleBot('token')
+bot = tg.TeleBot(config.tiken_vanya)
 
 
 
