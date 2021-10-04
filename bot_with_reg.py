@@ -7,7 +7,7 @@ class user:
         self.name = name
         self.id = id
 
-bot = tg.TeleBot(config.token)
+bot = tg.TeleBot(config.token_test)
 
 users = [user('Тим', 411175364)]
 
