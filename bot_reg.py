@@ -9,7 +9,7 @@ class user:
 
 bot = tg.TeleBot(config.token)
 
-users = []
+users = [user('Тим', 411175364)]
 
 #      0      1      2      3      4      5      6      7      8
 num = ['1. ', '2. ', '3. ', '4. ', '5. ', '6. ', '7. ', '8. ', '9. ']
@@ -155,6 +155,14 @@ def check(current_id): # функция которая проверяет зар
 def send_welcome(message):
     bot.reply_to(message, f'Здравствуй, приятно с тобой познакомиться. Если нужна будет помощь по работе со мной, то просто напиши мне /help и я тебе все объясню, но сначала пройди регистрацию с помощью команды /reg')
 
+@bot.message_handler(commands=['help'])
+def send_help(message):
+    cur_id = message.from_user.id
+    if check(cur_id) == 1:
+        bot.reply_to(message, f'Мои команды: \n \n' + '10 - расписание 10-го класса \n' + '11 - расписание 11-го класса \n' + 'завтра 10 - посмотреть расписание 10-х на завтра \n' + 'завтра 11 - посмотреть расписание 11-х на завтра \n' + "звонки - список всех звонков")
+    else:
+        bot.send_message(message.from_user.id, "Ошибка, ты не прошел регистрацию. Пожалуйста, сделай это с помощью комманды /reg")
+
 @bot.message_handler(commands=["reg"])
 def other_name(message):
     global user_id #глобальная переменная хранящая id зарегистрировшегося пользователя
@@ -162,7 +170,7 @@ def other_name(message):
     if check(user_id) == 1: #если такой id уже зарегистрирован, то не дает зарегистрироваться воторой раз
         bot.reply_to(message, f"Ошибка, ты уже прошел регистрацию. Воспользуйся командой /help для просмотра моих возможностей")
     else:
-        bot.reply_to(message, f"Пожалуйста введи свои Имя и Фамилию")
+        bot.reply_to(message, f"Пожалуйста введи свое имя")
 
     bot.register_next_step_handler(message, get_name) # переход к следующей функции
 
@@ -173,15 +181,6 @@ def get_name(message):
     bot.reply_to(message, f"Ты зарегистрирован в моей базе данных. Приятного пользования")
     print(users[len(users) - 1].name)
     print(users[len(users) - 1].id)
-
-
-@bot.message_handler(commands=['help'])
-def send_help(message):
-    cur_id = message.from_user.id
-    if check(cur_id) == 1:
-        bot.reply_to(message, f'Мои команды: \n \n' + '/about - что-то обо мне \n' + '10 - расписание 10-го класса \n' + '11 - расписание 11-го класса \n' + 'завтра 10 - посмотреть расписание 10-х на завтра \n' + 'завтра 11 - посмотреть расписание 11-х на завтра \n' + "звонки - список всех звонков")
-    else:
-        bot.send_message(message.from_user.id, "Ошибка, ты не прошел регистрацию. Пожалуйста, сделай это с помощью комманды /reg")
 
 
 @bot.message_handler(content_types=['text'])
