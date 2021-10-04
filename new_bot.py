@@ -4,6 +4,7 @@ import sysconfig
 import sys
 import math
 import types
+import config
 class event:
     def __init__(self, text, begin_h, begin_m, all_event): # класс для определения времени
         self.text = text # просто объявляем их
@@ -80,7 +81,7 @@ def check(current_id): # функция которая проверяет зар
             return 1
     return 0
 
-bot = tg.TeleBot("введите свой токен бота") # тег бота необходимый для его изменения
+bot = tg.TeleBot(config.token) # тег бота необходимый для его изменения
 @bot.message_handler(commands=['start']) # функция в которой проиходят все действия. commands типо данных( но я могу ошибаться), start - команда в боте для вывода следующего текста
 def send_welcome(message):
     bot.reply_to(message, f'Здравствуй, я Айла, приятно с тобой познакомиться. Если нужна будет помощь по работе со мной, то просто напиши мне /help и я тебе все объясню, но сначала пройди регистрацию с помощью команды /reg')
