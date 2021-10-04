@@ -9,7 +9,7 @@ class user:
 
 
 
-bot = tg.TeleBot(config.tiken_vanya)
+bot = tg.TeleBot(config.token_vanya)
 
 
 
