@@ -8,7 +8,7 @@ class user:
 
 
 
-bot = tg.TeleBot('1871699540:AAG01mW8QuTwN2H9_cGWsdBiHeDH7vi6vOM')
+bot = tg.TeleBot('token')
 
 
 
