@@ -1,7 +1,7 @@
 import telebot as tg
 import json
 
-bot = tg.TeleBot('2013015491:AAHpuV0ToVFOvXIp4MBBUoSrSyxfutzA7M0')
+bot = tg.TeleBot('token')
 
 with open('num1.json', 'r') as j:
     data = json.load(j)
