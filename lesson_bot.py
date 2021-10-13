@@ -2,7 +2,7 @@ from datetime import time, date, datetime
 import telebot as tg
 import config
 
-bot = tg.TeleBot(config.token_lesson)
+bot = tg.TeleBot(config.token_test)
 
 #      0      1      2      3      4      5      6      7      8
 num = ['1. ', '2. ', '3. ', '4. ', '5. ', '6. ', '7. ', '8. ', '9. ']
@@ -26,7 +26,8 @@ pop = [sub[0]+type[0], sub[0]+type[1], sub[2]+type[0], sub[2]+type[1], sub[3]+ty
 time = ['1. 8:30 - 9:10 (10) \n', '2. 9:20 - 10:00 (15) \n', '3. 10:15 - 10:55 (15) \n', '4. 11:10 - 11:50 (15) \n', '5. 12:05 - 12:45 (10) \n', '6. 12:55 - 13:35 (25) \n', '7. 14:00 - 14:40 (15) \n', '8. 14:55 - 15:35 (15) \n', '9. 15:50 - 16:30 \n']
 d = ['Расписание на понедельник \n \n']
 ########################################################################################################################
-day1_10_1 = [num[0] + sub[7] + cab[5]]
+# day1_10_1 = [num[0] + sub[7] + cab[5]]
+day1_10_1 = [num[0] + 'НИЧЕГО']
 day1_10_2 = [num[1] + pop[3] + cab[4] + ili[0] + pop[7] + cab[11]]
 day1_10_3 = [num[2] + pop[3] + cab[4] + ili[0] + pop[7] + cab[11]]
 day1_10_4 = [num[3] + sub[1] + pc[0]]
@@ -239,4 +240,10 @@ def send_lessons(message):
     else:
         bot.send_message(message.from_user.id, 'Ошибка, я не понял запроса. Пожалуйста, повторите ещё раз')
 # Обязательное условие!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-bot.polling(none_stop=True)
+if __name__ == '__main__':
+    while True:
+        try:
+            bot.polling(none_stop=True)
+        except Exception as e:
+            time.sleep(3)
+            print(e)
