@@ -1,9 +1,11 @@
 from datetime import date as dt
 from datetime import time as tm
+import traceback
 import telebot as tg
 import config
 import time
 import json
+import sys
 
 bot = tg.TeleBot(config.token_test)
 
@@ -68,8 +70,7 @@ def telegram_polling():
     except:
         traceback_error_string = traceback.format_exc()
         with open("Error.log", "a") as myfile:
-            myfile.write("\r\n\r\n" + time.strftime(
-                "%c") + "\r\n<<ERROR polling>>\r\n" + traceback_error_string + "\r\n<<ERROR polling>>")
+            myfile.write("\r\n\r\n" + time.strftime("%c") + "\r\n<<ERROR polling>>\r\n" + traceback_error_string + "\r\n<<ERROR polling>>")
         bot.stop_polling()
         time.sleep(10)
         telegram_polling()
