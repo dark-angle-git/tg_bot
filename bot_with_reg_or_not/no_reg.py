@@ -1,18 +1,12 @@
+import traceback, config, time, json, sys
 from datetime import date as dt
 from datetime import time as tm
+from admin import data, adm10, adm11
 import telebot as tg
-import traceback
-import config
-import time
-import json
-import sys
 
 bot = tg.TeleBot(config.token_test)
 
-with open('lessons.json', 'r') as j:
-    data = json.load(j)
-
-#======================================================================================================================#
+#=====================================================SHORT  NAMES=====================================================#
 today = dt.today().weekday()
 yesterday = today - 1
 tomorrow = today + 1
@@ -31,34 +25,40 @@ def get_time_table_tomorrow(cls_num, day='tomorrow'):
     return ''.join(res)
 
 lesson = ''.join(data["lessons"])
-#======================================================================================================================#
+#============================================ALL COMMANDS FOR SEND MESSAGES============================================#
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    reply(message, f'Здравствуй, приятно с тобой познакомиться. Если нужна будет помощь по работе со мной, то просто напиши мне /help и я тебе все объясню')
+    reply(message, "Добро пожаловать, {0.first_name}!\nЯ - <b>{1.first_name}</b>, бот созданный чтобы помогать тебе ориентироваться по предметам в течении дня. Напиши /help для того, чтобы узнать мои возможности".format(message.from_user, bot.get_me()), parse_mode='html')
 
 @bot.message_handler(commands=['help'])
 def send_help(message):
     reply(message, f'Мои команды: \n \n' + '10 - расписание 10-го класса \n' + '11 - расписание 11-го класса \n' + 'завтра 10 - посмотреть расписание 10-х на завтра \n' + 'завтра 11 - посмотреть расписание 11-х на завтра \n' + "уроки - время уроков" )
 
 @bot.message_handler(content_types=['text'])
-def send_lessons(message):
+def send_text(message):
     lowwer = message.text.lower()
+    mci = message.chat.id
     if lowwer == '10':
-        send(message.chat.id, get_time_table_today(10))
+        send(mci, get_time_table_today(10))
     elif lowwer == 'завтра 10':
         if today == 4: reply(message, 'Завтра суббота')
         elif today == 5: reply(message, 'Завтра воскресенье')
-        else: send(message.chat.id, get_time_table_tomorrow(10))
+        else: send(mci, get_time_table_tomorrow(10))
 
     elif lowwer == '11':
-        send(message.chat.id, get_time_table_today(11))
+        send(mci, get_time_table_today(11))
     elif lowwer == 'завтра 11':
         if today == 4: reply(message, 'Завтра суббота')
         elif today == 5: reply(message, 'Завтра воскресенье')
-        else: send(message.chat.id, get_time_table_tomorrow(11))
+        else: send(mci, get_time_table_tomorrow(11))
+
+    elif lowwer == 'admin 10':
+        send(mci, adm10)
+    elif lowwer == 'admin 11':
+        send(mci, adm11)
 
     elif lowwer == 'уроки':
-        send(message.chat.id, lesson)
+        send(mci, lesson)
 
     else:
         reply(message, 'Error')
@@ -70,7 +70,7 @@ def telegram_polling():
     except:
         traceback_error_string = traceback.format_exc()
         with open("Error.log", "a") as myfile:
-            myfile.write("\r\n\r\n" + time.strftime("%c") + "\r\n<<ERROR polling>>\r\n" + traceback_error_string + "\r\n<<ERROR polling>>")
+            myfile.write("\r\n\r\n" + time.strftime("%c") + "\r\n<<START ERROR polling>>\r\n" + traceback_error_string + "\r\n<<END ERROR polling>>")
         bot.stop_polling()
         time.sleep(10)
         telegram_polling()
